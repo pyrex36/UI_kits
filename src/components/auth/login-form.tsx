@@ -2,10 +2,9 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Checkbox } from "@/components/ui/checkbox";
 import { CloudSun } from "lucide-react";
 
-export default function RegisterForm() {
+export default function LoginForm() {
   return (
     <div
       className="min-h-screen w-full flex items-center justify-center p-4"
@@ -25,26 +24,10 @@ export default function RegisterForm() {
           <div className="w-12 h-12 rounded-full bg-sky-100 flex items-center justify-center mb-2">
             <CloudSun className="w-8 h-8 text-yellow-400" />
           </div>
-          <CardTitle className="text-2xl">Join Us!!</CardTitle>
-          <h2 className="text-3xl font-bold">Register</h2>
+          <CardTitle className="text-2xl">Welcome Back!</CardTitle>
+          <h2 className="text-3xl font-bold">Login</h2>
         </CardHeader>
         <CardContent className="space-y-4">
-          <div className="space-y-2">
-            <Label htmlFor="firstName">First Name</Label>
-            <Input id="firstName" placeholder="John" />
-          </div>
-          <div className="space-y-2">
-            <Label htmlFor="lastName">Last Name</Label>
-            <Input id="lastName" placeholder="Doe" />
-          </div>
-          <div className="space-y-2">
-            <Label htmlFor="username">Username</Label>
-            <Input id="username" placeholder="johndoe" />
-          </div>
-          <div className="space-y-2">
-            <Label htmlFor="phone">Phone</Label>
-            <Input id="phone" type="tel" placeholder="+1 234 567 8900" />
-          </div>
           <div className="space-y-2">
             <Label htmlFor="email">Email</Label>
             <Input id="email" type="email" placeholder="john@example.com" />
@@ -52,15 +35,6 @@ export default function RegisterForm() {
           <div className="space-y-2">
             <Label htmlFor="password">Password</Label>
             <Input id="password" type="password" />
-          </div>
-          <div className="flex items-center space-x-2">
-            <Checkbox id="terms" />
-            <label
-              htmlFor="terms"
-              className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-            >
-              agree to the terms & conditions
-            </label>
           </div>
           <Button
             className="w-full"
@@ -80,7 +54,7 @@ export default function RegisterForm() {
               (e.currentTarget.style.backgroundPosition = "left center")
             }
           >
-            Register
+            Login
           </Button>
           <div className="text-center space-y-4">
             <p className="text-sm text-gray-600">or continue with</p>
@@ -159,9 +133,9 @@ export default function RegisterForm() {
               </Button>
             </div>
             <p className="text-sm">
-              Already have an account?{" "}
-              <a href="/login" className="text-blue-700 hover:underline">
-                Login
+              Don't have an account?{" "}
+              <a href="/register" className="text-blue-700 hover:underline">
+                Register
               </a>
             </p>
           </div>
