@@ -22,7 +22,7 @@ export default function RegisterForm() {
         transition={{ duration: 0.5 }}
       >
         <Card
-          className="w-full max-w-md opacity-100"
+          className="w-full max-w-md opacity-100 shadow-2xl hover:shadow-3xl transition-shadow duration-300"
           style={{
             backgroundImage:
               "linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%)",
